@@ -1,0 +1,143 @@
+.slide1, .slide2, .slide3{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide1{
+    background: linear-gradient(to right , rgba(0,0,0,0.6),rgba(0, 0, 0, 0.6)), url('../assets/Images/slide1.jpg');
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.slide2 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/Images/slide2.jpg');
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+.slide3 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/Images/slide3.jpg');
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.left{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    color: white;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    justify-content: center;
+}
+
+.content h2{
+    font-size: 1.5rem;
+}
+
+.content h5{
+    line-height: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.right{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img{
+    width: 250px; 
+    height: 350px;
+    background-position: center;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.slider{
+    position: relative;
+}
+
+
+.button-next-slide{
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border-radius: 50%;
+        background-color: black;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 1%;
+        z-index: 7;
+}
+
+.button-next-slide:hover{
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+
+.button-prev-slide {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    z-index: 6;
+}
+
+.button-prev-slide:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+
+@media( max-width: 600px ) {
+    .slide1,.slide2,.slide3 {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+
+    .left, .right{
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .right img {
+        width :200px;
+        height: 280px;
+    }
+}
+
+@media(max-width: 300px) {
+    .right img{
+        width: 160px;
+        height: 200px;
+    }
+}
